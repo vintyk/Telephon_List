@@ -2,3 +2,7 @@ target/
 .classpath
 .project
 .settings/
+/spring-thymeleaf-pagination.iml
+.idea/
+spring-thymeleaf-pagination.iml
+
