@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head>
+<html xmlns:th="http://www.thymeleaf.org">
 
+<head>
+    <title>Persons</title>
     <link th:href="@{/resources/css/style.css}" rel="stylesheet"/>
     <link th:href="@{/resources/css/bootstrap.min.css}" rel="stylesheet"/>
     <link th:href="@{/resources/css/bootstrap-grid.min.css}" rel="stylesheet"/>
     <link th:href="@{/resources/css/bootstrap-reboot.min.css}" rel="stylesheet"/>
-    <title>Persons</title>
     <style type="text/css">
         div {
-            background: url(/resources/pic/backgrnd3.jpg)
+            background: url(/resources/pic/fon.jpg)
         }
     </style>
 </head>
 <body>
+<div th:replace="fragments/header :: header"/>
 <div class="container">
     <div class="row">
         <h1>Persons</h1>

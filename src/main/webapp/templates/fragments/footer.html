@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+
+    <link th:href="@{/resources/css/style.css}" rel="stylesheet"/>
+    <link th:href="@{/resources/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/resources/css/bootstrap-grid.min.css}" rel="stylesheet"/>
+    <link th:href="@{/resources/css/bootstrap-reboot.min.css}" rel="stylesheet"/>
+    <title>Persons</title>
+    <style type="text/css">
+        div {
+            background: url(/resources/pic/backgrnd3.jpg)
+        }
+    </style>
+</head>
+<body>
+<script th:src="@{/resources/js/app.js}"></script>
+
+<div th:fragment="footer">
+
+    <div class="container">
+        <footer>
+            <!-- this is footer -->
+            © 2017 developer: vinty1978@gmail.com
+            <span sec:authorize="isAuthenticated()">
+                | Logged user: <span sec:authentication="name"></span> |
+                Roles: <span sec:authentication="principal.authorities"></span> |
+                <a th:href="@{/logout}">Sign Out</a>
+            </span>
+
+            <script th:src="@{/resources/js/bootstrap.min.js}"></script>
+            <script th:src="@{/resources/js/npm.js}"></script>
+
+        </footer>
+    </div>
+
+</div>
+</body>
+</html>

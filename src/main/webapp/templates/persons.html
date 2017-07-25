@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html
-        xmlns="http://www.w3.org/1999/xhtml"
-        xmlns:th="http://www.thymeleaf.org"
-        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-<head>
+<html xmlns:th="http://www.thymeleaf.org">
 
-    <link th:href="@{/resources/css/style.css}" rel="stylesheet"/>
-    <link th:href="@{/resources/css/bootstrap.min.css}" rel="stylesheet"/>
-    <link th:href="@{/resources/css/bootstrap-grid.min.css}" rel="stylesheet"/>
-    <link th:href="@{/resources/css/bootstrap-reboot.min.css}" rel="stylesheet"/>
+<head>
     <title>Persons</title>
+    <div th:replace="fragments/header :: header-css"/>
     <style type="text/css">
         div {
-            background: url(/resources/pic/backgrnd3.jpg)
+            background: url(/resources/pic/fon.jpg)
         }
     </style>
 </head>
+
 <body>
+
+<div th:replace="fragments/header :: header"/>
+
 <script th:src="@{/resources/js/app.js}"></script>
 <p>Click <a th:href="@{/adminEdit.html}">here</a> to Admin Editing</p>
 <div class="container">

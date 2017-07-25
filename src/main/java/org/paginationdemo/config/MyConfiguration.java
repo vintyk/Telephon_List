@@ -27,12 +27,16 @@ public void addResourceHandlers(ResourceHandlerRegistry registry) {
     registry
             .addResourceHandler("/resources/**")
             .addResourceLocations("/resources/");
+
     registry
             .addResourceHandler("/src/main/webapp/resources/**")
             .addResourceLocations("/src/main/webapp/resources/");
     registry
             .addResourceHandler("/templates/**")
             .addResourceLocations("/src/main/webapp/templates/");
+    registry
+            .addResourceHandler("/fragments/**")
+            .addResourceLocations("/src/main/webapp/templates/fragments/");
     registry
             .addResourceHandler("/webapp/**/*")
             .addResourceLocations("/src/main/webapp/");
