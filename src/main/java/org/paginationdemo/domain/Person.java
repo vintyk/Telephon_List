@@ -27,9 +27,9 @@ public class Person {
 	private String lastName;
 	@Setter
 	@Getter
-	private int number;
+	private String number;
 
-	public Person(String firstName, String lastName, int number) {
+	public Person(String firstName, String lastName, String number) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.number = number;
