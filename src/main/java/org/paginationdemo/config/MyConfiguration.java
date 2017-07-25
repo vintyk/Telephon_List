@@ -40,5 +40,5 @@ public void addResourceHandlers(ResourceHandlerRegistry registry) {
     registry
             .addResourceHandler("/webapp/**/*")
             .addResourceLocations("/src/main/webapp/");
-}
+    }
 }
