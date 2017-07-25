@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <div th:fragment="header-css">
     <link th:href="@{/resources/css/style.css}" rel="stylesheet"/>
     <link th:href="@{/resources/css/bootstrap.min.css}" rel="stylesheet"/>
     <link th:href="@{/resources/css/bootstrap-grid.min.css}" rel="stylesheet"/>
     <link th:href="@{/resources/css/bootstrap-reboot.min.css}" rel="stylesheet"/>
-    <title>Persons</title>
+        <style type="text/css">
+            div {
+                background: url(/resources/pic/fon.jpg) no-repeat;
+                background-size: 150%;
+            }
+        </style>
     </div>
+    <title>Persons</title>
 
 </head>
 <body>
@@ -17,11 +25,14 @@
     <nav class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" th:href="@{/}">HOME</a>
+                <a class="navbar-brand" th:href="@{/}">ТЕЛЕФОННЫЙ СПРАВОЧНИК</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a th:href="@{/login}">Войти</a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a th:href="@{/adminEdit}">Администратор</a></li>
                 </ul>
                 <ul class="nav navbar-nav">
                     <li class="active"><a th:href="@{/}">Выйти</a></li>
@@ -30,9 +41,8 @@
         </div>
     </nav>
 </div>
-
-
 <script th:src="@{/resources/js/bootstrap.min.js}"></script>
 <script th:src="@{/resources/js/npm.js}"></script>
+
 </body>
 </html>

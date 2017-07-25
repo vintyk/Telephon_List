@@ -2,24 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Persons</title>
-    <link th:href="@{/resources/css/style.css}" rel="stylesheet"/>
-    <link th:href="@{/resources/css/bootstrap.min.css}" rel="stylesheet"/>
-    <link th:href="@{/resources/css/bootstrap-grid.min.css}" rel="stylesheet"/>
-    <link th:href="@{/resources/css/bootstrap-reboot.min.css}" rel="stylesheet"/>
-    <style type="text/css">
-        div {
-            background: url(/resources/pic/fon.jpg)
-        }
-    </style>
+    <title>Administrator</title>
+    <div th:replace="fragments/header :: header-css"/>
 </head>
+
 <body>
+
 <div th:replace="fragments/header :: header"/>
+
 <div class="container">
     <div class="row">
-        <h1>Persons</h1>
-
-
+        <h1>Administrator</h1>
+        <h6>(Spring Security protected)</h6>
+        <h6 th:inline="text">role: [[${#httpServletRequest.remoteUser}]]!</h6>
         <table class="table table-hover">
             <thead class="thead-inverse">
             <tr>
@@ -99,10 +94,13 @@
             </form>
         </div>
     </div>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+    <div th:replace="fragments/footer :: footer"/>
 </div>
-<script th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
-<script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
-<script th:src="@{/resources/js/app.js}"></script>
-<script th:src="@{/resources/js/bootstrap.min.js}"></script>
+
+
+
 </body>
 </html>
