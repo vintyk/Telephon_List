@@ -14,13 +14,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 public class MyConfiguration extends WebMvcConfigurerAdapter {
 
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-
-        registry.addViewController("/").setViewName("persons");
-        registry.addViewController("/adminEdit").setViewName("adminEdit");
-        registry.addViewController("/login").setViewName("login");
-    }
+//    @Override
+//    public void addViewControllers(ViewControllerRegistry registry) {
+//
+//        registry.addViewController("/").setViewName("persons");
+//        registry.addViewController("/adminEdit").setViewName("adminEdit");
+//        registry.addViewController("/login").setViewName("login");
+//    }
 
 @Override
 public void addResourceHandlers(ResourceHandlerRegistry registry) {
