@@ -12,8 +12,6 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private AccessDeniedHandler accessDeniedHandler;
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
@@ -28,16 +26,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/")
-                .and()
-                .exceptionHandling().accessDeniedHandler(accessDeniedHandler)
         ;
 
-    }
-
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-                .inMemoryAuthentication()
-                .withUser("admin").password("admin").roles("ADMIN");
     }
 }

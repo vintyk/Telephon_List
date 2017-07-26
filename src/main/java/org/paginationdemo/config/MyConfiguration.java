@@ -33,12 +33,12 @@ public void addResourceHandlers(ResourceHandlerRegistry registry) {
             .addResourceLocations("/src/main/webapp/resources/");
     registry
             .addResourceHandler("/templates/**")
-            .addResourceLocations("/src/main/webapp/templates/");
+            .addResourceLocations("/src/main/webapp/resources/templates/");
     registry
             .addResourceHandler("/fragments/**")
-            .addResourceLocations("/src/main/webapp/templates/fragments/");
+            .addResourceLocations("/src/main/webapp/resources/templates/fragments/");
     registry
-            .addResourceHandler("/webapp/**/*")
+            .addResourceHandler("/webapp/**")
             .addResourceLocations("/src/main/webapp/");
     }
 }
